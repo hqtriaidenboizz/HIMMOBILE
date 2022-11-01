@@ -8,10 +8,10 @@ import Tabs from "./src/navigation/tabs";
 
 function App () {
   return(
-    // <NavigationContainer>
-    //   <Tabs/>
-    // </NavigationContainer>
-    <DiabetesCare/>
+    <NavigationContainer>
+      <Tabs/>
+    </NavigationContainer>
+    // <DiabetesCare/>
   )
 }
 
