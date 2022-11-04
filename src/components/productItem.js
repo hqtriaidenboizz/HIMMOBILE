@@ -14,16 +14,22 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from "@react-navigation/native";
 const { width } = Dimensions.get('screen');
-const ProductItem = (props) => {
-  const sale = props.sale;
+import Detail from "../screens/DetailProduct";
+const ProductItem = ({products}) => {
+  console.log(products);
+  const sale = products.sale;
+  const navigation = useNavigation()
   return (
-    <Pressable style={styles.container}>
+    <Pressable style={styles.container}
+    onPress={() => navigation.navigate('DetailProduct',products)}
+    >
       <View style={{
       }}>
         <View style={styles.containerImage}>
           <Image style={styles.image}
-            source={props.url}
+            source={products.url}
           ></Image>
         </View>
         <View style={{
@@ -37,14 +43,14 @@ const ProductItem = (props) => {
             textAlign: "left",
             fontWeight: "400",
             marginBottom: 8
-          }}>{props.title}</Text>
+          }}>{products.title}</Text>
           <Text
             style={{
               color: "#090F47",
               fontSize: 16,
               fontWeight: "bold",
 
-            }}>${props.price}</Text>
+            }}>${products.price}</Text>
         </View>
       </View>
       <View style={{
@@ -67,7 +73,7 @@ const ProductItem = (props) => {
           fontSize: 13,
           fontWeight: "700",
 
-        }}>{props.star}</Text>
+        }}>{products.star}</Text>
       </View>
       {(sale === 100) ?
         <View style={[styles.sale, {backgroundColor: "#FF5A5A",}]
@@ -77,7 +83,7 @@ const ProductItem = (props) => {
         (sale > 0 && sale < 100 ) ? 
         <View style={[styles.sale, {   backgroundColor: "#FFC618",}]
         }>
-          <Text style={styles.saleText}>{props.sale}% OFF</Text>
+          <Text style={styles.saleText}>{products.sale}% OFF</Text>
         </View> : null} 
 
     </Pressable>

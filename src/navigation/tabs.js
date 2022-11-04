@@ -25,6 +25,8 @@ import Cart from "../screens/Cart.js";
 import Notification from "../screens/Notificaition.js";
 import AddNew from "../screens/AddNew.js";
 import DiabetesCare from "../screens/DiabetesCare.js";
+import DetailProduct from "../screens/DetailProduct.js";
+import Stacks from "./Stacks.js";
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
@@ -47,7 +49,7 @@ const Tabs = () => {
           )
         }}
         name="Home"
-        component={Home}
+        component={Stacks}
       />
 
       <Tab.Screen
@@ -100,6 +102,9 @@ const Tabs = () => {
         name="Account"
         component={Account} />
 
+        {/* <Tab.Screen
+        name="DetailProduct"
+        component={DetailProduct} /> */}
 
     </Tab.Navigator>
 

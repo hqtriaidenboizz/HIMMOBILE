@@ -14,7 +14,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const Home= ({navigation}) =>{
+const Home= () =>{
   return (
     <Text>HomePage</Text>
   )

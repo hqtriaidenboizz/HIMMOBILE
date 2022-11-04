@@ -19,13 +19,13 @@ import Banner from "../components/Banner";
 import DiabeticDiet from "../containers/diabeticDiet";
 import Products from "../containers/products";
 
-function DiabetesCare() {
+function DiabetesCare({navigation}) {
   return (
       <View style={styles.wrapper}>
 
-<TouchableOpacity style={styles.backButon}>
+<TouchableOpacity style={styles.backButon} >
   <Icon style={styles.arrowbutton} name="arrow-left" size={25} color="#000" />
-  <Text style={styles.buttonName}>Diabetes Care</Text>
+  <Text style={styles.buttonName} >Diabetes Care</Text>
 </TouchableOpacity>
 
 <ScrollView

@@ -22,12 +22,9 @@ const Products = () => {
         columnWrapperStyle={{justifyContent: 'space-between'}}
         data={data2}
         numColumns={2}
-        renderItem={({item}) =><ProductItem 
-        url={item.url}
-        title={item.title}
-        price={item.price}
-        star={item.star}
-        sale = {item.sale}/>}/>
+        renderItem={({item}) =><ProductItem products={item}
+        
+        />}/>
       </View>
     </View>
   )

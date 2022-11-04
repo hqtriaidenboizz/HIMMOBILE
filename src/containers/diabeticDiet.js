@@ -18,7 +18,6 @@ import ProductType from "../components/productType";
 import { data } from "../assets/consts/data";
 
 function DiabeticDiet() {
-  // console.log(data);
   return (
     <View style={styles.container}>
       <Text style={styles.catagory}>Diabetic Diet</Text>
@@ -27,7 +26,8 @@ function DiabeticDiet() {
           data={data}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
-          renderItem={({ item }) => <ProductType
+          renderItem={({ item }) => <ProductType 
+          
             url={item.url}
             title={item.title} />
           }
