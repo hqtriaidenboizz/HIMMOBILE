@@ -29,9 +29,10 @@ const ProductItem = ({products}) => {
       }}>
         <View style={styles.containerImage}>
           <Image style={styles.image}
-            source={products.url}
+            // source={require(products.url)}
+            source={require("../assets/images/prb1.png")}
           ></Image>
-        </View>
+        </View> 
         <View style={{
           paddingRight: 30,
           paddingLeft: 16,

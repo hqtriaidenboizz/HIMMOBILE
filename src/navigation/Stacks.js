@@ -20,14 +20,20 @@ import {
 import Home from '../screens/Home';
 import DetailProduct from '../screens/DetailProduct';
 import Icon from 'react-native-vector-icons/Feather';
+import AddNew from '../screens/AddNew';
+import DiabetesCare from '../screens/DiabetesCare';
 
 const Stacks = () => {
   return (
 
-    <Stack.Navigator>
-      <Stack.Screen name="index" component={Home} />
+    <Stack.Navigator >
+      <Stack.Screen 
+      options={{
+        headerShown:false       
+      }} name="index" component={DiabetesCare} />
       <Stack.Screen
       options={{
+        
         headerStyle: {
           height:30,
           backgroundColor: '#fff',
@@ -36,7 +42,7 @@ const Stacks = () => {
         headerShadowVisible:false,
         headerRight:(props) => <View style
         ={{display:"flex",
-        flexDirection:"row",
+        flexDirection:"row",  
         marginRight:25}}>
            <Icon  style={{marginLeft:10}} name='bell' color="#090F47" size={20}/>
            <Icon style={{marginLeft:10}} name='shopping-bag' color="#090F47" size={20}/>
